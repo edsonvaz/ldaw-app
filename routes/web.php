@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::view('/team','team.index',['name' => 'EQUIPO 4']);
+Route::view('/dashboard','dashboard.index',['name' => 'EQUIPO 4']);
