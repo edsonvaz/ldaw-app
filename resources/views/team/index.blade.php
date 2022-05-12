@@ -17,7 +17,7 @@
   <center><img src="{{ asset('img/im1.jpg') }}" class="card-img-top" style="width: 100%; height: auto;"></center>
     <div class="card-body">
       <h5 class="card-title">Edgar Yair Camacho Paredes</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">Soy estudiante de la carrera de ingeniería en sistemas computacionales, mi experiencia dentro del desarrollo web ha sido a través de lenguajes como html, css y javascript, así como el uso básico de los frameworks AngularJS y Django. Actualmente me encuentro desarrollando en node.js, react, express y Laravel.</p>
       <p class="card-text"><small class="text-muted">A01206849</small></p>
     </div>
   </div>
