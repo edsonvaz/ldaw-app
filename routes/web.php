@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::view('/team','team.index',['name' => 'EQUIPO 4']);
 Route::view('/dashboard','dashboard.index',['name' => 'EQUIPO 4']);
+Route::view('/evento','evento.index',['name' => 'EQUIPO 4']);
+
