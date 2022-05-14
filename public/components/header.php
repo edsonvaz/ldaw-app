@@ -17,7 +17,7 @@
       </div>
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
+          <a href="/dashboard" class="navbar-brand d-flex align-items-center">
           <img src="\img\logo.png" style="width: 20px; height: 20px;"><strong>&nbsp;CourseHall</strong>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
