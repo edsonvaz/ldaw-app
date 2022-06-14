@@ -7,16 +7,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body class="bg-secondary">
+<body style="background-color:#0C7489;">
   <div>
     <br>
   </div>
   <section class="d-flex justify-content-center">
-    <div class="card col-sm-4 p-4">  
+    <div class="card col-sm-4 p-4" style="background-color:#13505B;" color=white>  
       <div class="container">
         <form method="POST">
           @csrf
-          <h1>Acceder</h1>
+          <img src="\img\logo.png" style="width: 20px; height: 20px;"><strong>&nbsp;CourseHall</strong>
+          <h1 color=white>Acceder</h1>
           <div class="form-group">
             <label for="exampleInputEmail1">Correo electronico</label>
             <input type="email" class="form-control" id="email" name="email" required aria-describedby="emailHelp" placeholder="Introduce tu correo electronico">
