@@ -14,20 +14,21 @@
   <section class="d-flex justify-content-center">
     <div class="card col-sm-4 p-4">  
       <div class="container">
-        <form>
+        <form method="POST">
+          @csrf
           <h1>Acceder</h1>
           <div class="form-group">
             <label for="exampleInputEmail1">Correo electronico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduce tu correo electronico">
+            <input type="email" class="form-control" id="email" name="email" required aria-describedby="emailHelp" placeholder="Introduce tu correo electronico">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Introduce tu contraseña">
+            <input type="password" class="form-control" id="password" required name="password" placeholder="Introduce tu contraseña">
             <a href="#">¿Olvidaste la contraseña?</a> <br>
             <small id="emailHelp" class="form-text text-muted">No compartas tu contraseña con nadie</small>
           </div>
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" id="recuerdame" name="recuerdame">
             <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
           </div>
           <div class="row">

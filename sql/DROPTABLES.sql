@@ -1,0 +1,11 @@
+DROP TABLE asistentes;
+DROP TABLE categorias;
+DROP TABLE eventos;
+DROP TABLE eventos_asistentes;
+DROP TABLE eventos_usuarios;
+DROP TABLE metodos_pago;
+DROP TABLE permisos;
+DROP TABLE roles;
+DROP TABLE roles_permisos;
+DROP TABLE roles_usuarios;
+DROP TABLE usuarios;
