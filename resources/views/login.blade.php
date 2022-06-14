@@ -24,7 +24,6 @@
           <div class="form-group">
             <label for="exampleInputPassword1">Contraseña</label>
             <input type="password" class="form-control" id="password" required name="password" placeholder="Introduce tu contraseña">
-            <a href="#">¿Olvidaste la contraseña?</a> <br>
             <small id="emailHelp" class="form-text text-muted">No compartas tu contraseña con nadie</small>
           </div>
           <div class="form-check">
@@ -33,10 +32,13 @@
           </div>
           <div class="row">
             <div class="col">
-              <a href="#">Crear cuenta </a>
+              <a class="btn btn-dark" href="/registrarse">Crear cuenta </a>
             </div>
             <div class="col">
               <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+            </div>
+            <div class="col">
+              <a class="btn btn-danger" href="/dashboard">Regresar</a>
             </div>
           </div>
         </form>    

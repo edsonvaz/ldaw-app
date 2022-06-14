@@ -32,6 +32,7 @@ Route::view('login', 'login')->name('login')->middleware('guest');
 
 Route::post('/login',[LoginController::class, 'login']);
 Route::post('/logout',[LoginController::class, 'logout']);
+Route::post('/registrarse',[LoginController::class, 'registrarse']);
 
 Route::get('/registrarse', function(){
     return view('registro_usuario');

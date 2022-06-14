@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Usuarios;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class LoginController extends Controller
 {
@@ -31,6 +33,19 @@ class LoginController extends Controller
 
         return $redirect->to('/dashboard');
         
+    }
+
+    public function registrarse(Request $request, Redirector $redirect){
+        $usuario = new Usuarios();
+        
+        $usuario->name = $request->name;
+        $usuario->apellido = $request->apellido;
+        $usuario->celular = $request->celular;
+        $usuario->email = $request->email;
+        $usuario->password = bcrypt($request->password);
+
+        $usuario->save();
+        return $redirect->to('/dashboard');
     }
 }
 
