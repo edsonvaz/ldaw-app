@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('eventos', function (Blueprint $table) {
             $table->id('id_evento');
-            $table->integer('id_metodo');
-            $table->integer('id_categoria');
+            $table->integer('id_metodo')->nullable();
+            $table->integer('id_categoria')->nullable();
             $table->string('nombre');
             $table->string('siglas');
             $table->text('descripcion');
             $table->integer('duracion');
             $table->integer('cupo');
-            $table->float('costo');
+            $table->integer('costo');
             $table->string('lugar');
             $table->boolean('activo');
             $table->timestamps();

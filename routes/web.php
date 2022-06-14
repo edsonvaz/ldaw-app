@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\EventController;
 use GuzzleHttp\Middleware;
 
 use Illuminate\Support\Facades\Route;
@@ -20,19 +21,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-#Route::view('/team','team.index',['name' => 'EQUIPO 4']);
-#Route::view('/dashboard','dashboard.index',['name' => 'EQUIPO 4']);
-
-/*Route::get('/login', function(){
-    return view('login');
-})->name('login');
-*/
-
 Route::view('login', 'login')->name('login')->middleware('guest');
 
 Route::post('/login',[LoginController::class, 'login']);
 Route::post('/logout',[LoginController::class, 'logout']);
 Route::post('/registrarse',[LoginController::class, 'registrarse']);
+Route::post('/addevent',[EventController::class, 'addevent']);
+
+Route::get('/addevent', function(){
+    return view('addevent');
+});
 
 Route::get('/registrarse', function(){
     return view('registro_usuario');
