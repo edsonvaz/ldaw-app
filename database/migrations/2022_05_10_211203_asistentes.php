@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('apellido');
             $table->integer('edad');
             $table->string('celular');
-            $table->integer('instituto');
+            $table->string('instituto');
             $table->string('correo_electronico')->unique();
             $table->string('estado_residencia');
             $table->timestamps();

@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('/team','team.index',['name' => 'EQUIPO 4']);
-Route::view('/dashboard','dashboard.index',['name' => 'EQUIPO 4']);
+#Route::view('/team','team.index',['name' => 'EQUIPO 4']);
+#Route::view('/dashboard','dashboard.index',['name' => 'EQUIPO 4']);
 
 Route::get('/login', function(){
     return view('login');
@@ -31,3 +31,9 @@ Route::get('/registrarse', function(){
 Route::get('/home', function(){
     return view('home');
 });
+Route::view('/team','team.index',['name' => 'team']);
+Route::view('/dashboard','dashboard.index',['name' => 'dashboard']);
+Route::view('/evento','evento.index',['name' => 'evento']);
+Route::view('/evento/registra','registra.index',['name' => 'evento']);
+
+
