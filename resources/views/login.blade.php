@@ -17,7 +17,7 @@
         <form method="POST">
           @csrf
           <img src="\img\logo.png" style="width: 20px; height: 20px;"><strong>&nbsp;CourseHall</strong>
-          <h1 color=white>Acceder</h1>
+          <h1 >Acceder</h1>
           <div class="form-group">
             <label for="exampleInputEmail1">Correo electronico</label>
             <input type="email" class="form-control" id="email" name="email" required aria-describedby="emailHelp" placeholder="Introduce tu correo electronico">
