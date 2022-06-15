@@ -7,6 +7,11 @@ use App\Models\Eventos;
 
 class EventController extends Controller
 {
+    public function index(){
+        $eventos = Eventos::paginate();
+        return view('dashboard.index', compact('eventos'));
+    }
+
     public function addEvent(Request $request, Redirector $redirect){
         $evento = new Eventos();
         

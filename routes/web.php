@@ -40,8 +40,9 @@ Route::get('/home', function(){
     return view('home');
 });
 Route::view('/team','team.index',['name' => 'team']);
-Route::view('/dashboard','dashboard.index',['name' => 'dashboard']);
 Route::view('/evento','evento.index',['name' => 'evento']);
 Route::view('/evento/registra','registra.index',['name' => 'evento'])->middleware('auth');
+
+Route::get('/dashboard',[EventController::class, 'index']);
 
 

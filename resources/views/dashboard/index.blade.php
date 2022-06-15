@@ -1,4 +1,4 @@
-<?php $NumOfEvents = ["col-md-4","col-md-4","col-md-4","col-md-4","col-md-4","col-md-4"]; $document_root = $_SERVER['DOCUMENT_ROOT'];?>
+<?php $document_root = $_SERVER['DOCUMENT_ROOT'];?>
 
 
 <!doctype html>
@@ -23,19 +23,18 @@
         <div class="container">
           <div class="row">
 
-            <?php foreach($NumOfEvents as $NoE){?>
+            <?php foreach($eventos as $evento){?>
 
-            <div class="<?php echo($NoE) ?>">
+            <div class="col-md-4">
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src="{{ asset('img\room.jpg')}}" style="width: 100%; height: auto;">
                 <div class="card-body">
-                <h5 class="card-title">Titulo de Evento</h5>
-                  <p class="card-text">Descripcion de evento</p>
+                <h5 class="card-title">{{$evento->nombre}}</h5>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a class="btn btn-sm btn-outline-secondary" href="/evento" role="button">Ver</a>
                     </div>
-                    <small class="text-muted">12/04/2912</small>
+                    <small class="text-muted">Cupo: {{$evento->cupo}}</small>
                   </div>
                 </div>
               </div>
@@ -48,6 +47,8 @@
       </div>
 
     </main>
+
+    {{$eventos->links()}}
 
     <?php require_once($document_root.'/components/footer.php'); ?>
     <?php require_once($document_root.'/js/JS_scripts.php'); ?>
