@@ -9,10 +9,17 @@
     
     
     <main role="main">
-
-    <h1 class="display-4" style="text-align:center">Proximos eventos</h1>
-      <div class="album py-5 bg-light">
-
+    
+      <div class="container">
+        <h1 class="display-4" style="text-align:center">Proximos eventos</h1>
+      </div>
+    <div class="album py-5 bg-light">
+      @auth
+        <div class="row justify-content-center"> 
+          <a class="btn btn-success col-1" href="/addevent">Añadir evento</a>
+        </div>
+      @endauth
+        <br><br>
         <div class="container">
           <div class="row">
 
