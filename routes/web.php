@@ -26,11 +26,14 @@ Route::view('login', 'login')->name('login')->middleware('guest');
 Route::post('/login',[LoginController::class, 'login']);
 Route::post('/logout',[LoginController::class, 'logout']);
 Route::post('/registrarse',[LoginController::class, 'registrarse']);
-Route::post('/addevent',[EventController::class, 'addevent']);
+Route::post('/addevent',[EventController::class, 'addevent'])->middleware('auth');
+
+Route::get('/eventos',[EventController::class, 'index']);
+Route::get('/eventos/{id}',[EventController::class, 'detalles'])->name('eventos.detalles');
 
 Route::get('/addevent', function(){
     return view('addevent');
-});
+})->middleware('auth');
 
 Route::get('/registrarse', function(){
     return view('registro_usuario');

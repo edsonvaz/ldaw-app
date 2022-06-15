@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Routing\Redirector;
 use Illuminate\Http\Request;
 use App\Models\Eventos;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class EventController extends Controller
 {
@@ -21,5 +22,17 @@ class EventController extends Controller
 
         $evento->save();
         return $redirect->to('/dashboard');
+    }
+
+    public function index(){
+        $eventos = Eventos::all();
+
+        return view('evento.index', compact('eventos'));
+    }
+
+    public function detalles($id_evento){
+        $event = Eventos::find($id_evento);
+        return $event;
+        return view('evento.detalles', compact('event'));        
     }
 }
