@@ -32,7 +32,7 @@
                 <h5 class="card-title">{{$evento->nombre}}</h5>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <a class="btn btn-sm btn-outline-secondary" href="/evento" role="button">Ver</a>
+                      <a class="btn btn-sm btn-outline-secondary" href="{{route('eventos.show', $evento->id_evento)}}" role="button">Ver</a>
                     </div>
                     <small class="text-muted">Cupo: {{$evento->cupo}}</small>
                   </div>

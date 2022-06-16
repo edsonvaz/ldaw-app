@@ -29,6 +29,8 @@ Route::post('/registrarse',[LoginController::class, 'registrarse']);
 Route::post('/addevent',[EventController::class, 'addevent']);
 Route::post('/evento/registra',[EventController::class, 'addattendee']);
 
+Route::get('/evento/{id_evento}',[EventController::class, 'show'])->name('eventos.show');
+
 Route::get('/addevent', function(){
     return view('addevent');
 });
