@@ -16,8 +16,13 @@
 
   <div class="card mb-3">
   <div class="card-body">
-    <h3 class="card-title">Nombre de evento aquí</h3>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h3 class="card-title">Nombre del evento: {{$event->nombre}}</h3>
+    <p class="card-text">Siglas: {{$event->siglas}}</p>
+    <p class="card-text">Descripcion: {{$event->descripcion}}</p>
+    <p class="card-text">Duracion: {{$event->duracion}} minutos</p>
+    <p class="card-text">Cupo: {{$event->cupo}} personas</p>
+    <p class="card-text">Costo: ${{$event->costo}}</p>
+    <p class="card-text">Lugar: {{$event->lugar}}</p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     <div class="btn-group">
                       <a class="btn btn-sm btn-outline-secondary" href="/evento/registra" role="button">Registrarme</a>

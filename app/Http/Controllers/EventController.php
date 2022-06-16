@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Routing\Redirector;
 use Illuminate\Http\Request;
 use App\Models\Eventos;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Models\Asistentes;
 
 class EventController extends Controller
@@ -43,4 +44,12 @@ class EventController extends Controller
         $asistente->save();
         return $redirect->to('/dashboard');
     }
+    
+
+    public function show($id){
+       $event = Eventos::find($id);
+
+       return view('evento.index', compact('event'));      
+    }
+
 }
