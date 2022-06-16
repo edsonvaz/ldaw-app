@@ -27,6 +27,7 @@ Route::post('/login',[LoginController::class, 'login']);
 Route::post('/logout',[LoginController::class, 'logout']);
 Route::post('/registrarse',[LoginController::class, 'registrarse']);
 Route::post('/addevent',[EventController::class, 'addevent']);
+Route::post('/evento/registra',[EventController::class, 'addattendee']);
 
 Route::get('/addevent', function(){
     return view('addevent');
